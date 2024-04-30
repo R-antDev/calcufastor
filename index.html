@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/59539ec33f.js" crossorigin="anonymous"></script>
+    <title>Calcufastor</title>
+</head>
+
+<body class="space-y-6">
+    <header>
+        <h1 class="text-3xl font-bold text-center pt-10 underline underline-offset-2 ">Calcufastor</h1>
+    </header>
+    <nav class="space-y-6">
+        <div class="flex justify-center items-center space-x-6">
+            <div class="flex items-center space-x-4">
+                <div class="flex justify-center items-center bg-blue-950 w-12 h-12 rounded-full">
+                    <button title="Power switch" type="button">
+                        <i class=" fa-xl text-cyan-500 fa-2xl fa-solid fa-bolt-lightning"></i>
+                        <!-- <i class="fa-2xl fa-solid fa-bolt-lightning" style="color: #FFD43B;"></i> -->
+                    </button>
+                </div>
+                <p class="text-xs">Power On</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="flex justify-center items-center bg-blue-950 w-12 h-12 rounded-full">
+                    <button title="Mode switch" type="button">
+                        <i class="fa-xl text-orange-500 fa-2xl fa-solid fa-microscope"></i>
+                        <!-- <i class="fa-2xl fa-solid fa-microscope" style="color: #FFD43B;"></i> -->
+                    </button>
+                </div>
+                <p class="text-xs">Scientific</p>
+            </div>
+        </div>
+    </nav>
+    <section class="flex justify-center items-start space-x-10">
+        <div class="w-80 border border-1 border-zinc-600 rounded-lg h-full p-6 space-y-2 flex flex-col">
+
+            <input type="number" title="first-operand" id="input-first-operand" placeholder="0" class="text-xl w-full">
+            <input type="number" title="second-operand" id="input-second-operand" placeholder="0" class="text-xl w-full">
+            
+            <input class="text-xl font-bold text-blue-500" type="text" title="operator" id="operator" placeholder="+,-,/,*">
+            
+            <div class="flex space-x-6 items-center">
+                <p class="text-sm text-gray-500">Result: </p>
+                <h1 class="text-4xl" id="el-result">
+                    0
+                </h1>
+            </div>
+        </div>
+
+    </section>
+    <article class="space-y-10">
+
+        <article class="flex justify-center space-x-10">
+            <button title="Addition" class="flex items-center" id="btn-add" type="button">
+                <i class="hover:text-blue-900 fa-2xl fa-2xl fa-solid fa-circle-plus"></i>
+            </button>
+            <button title="Substruction" id="btn-sub" type="button">
+                <i class="hover:text-blue-900 fa-2xl fa-2xl fa-solid fa-circle-minus"></i>
+            </button>
+            <button title="multiple" id="btn-mul" type="button">
+                <i class="hover:text-blue-900 fa-2xl fa-2xl fa-solid fa-circle-xmark"></i>
+            </button>
+            <button title="divide" id="btn-div" type="button">
+                <i class="hover:text-blue-900 fa-2xl fa-2xl fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </article>
+        <!-- Numbers -->
+        <article class="flex flex-col justify-center space-y-2">
+            <div class="flex justify-center space-x-10">
+                <button id="btn-seven" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="7" type="button">
+                    <i class="fa-2xl fa-solid fa-7"></i>
+                </button>
+                <button id="btn-eight" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="8" type="button">
+                    <i class="fa-2xl fa-solid fa-8"></i>
+                </button>
+                <button id="btn-nine" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="9" type="button">
+                    <i class="fa-2xl fa-solid fa-9"></i>
+                </button>
+            </div>
+            <div class="flex justify-center space-x-10">
+                <button id="btn-four" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="4" type="button">
+                    <i class="fa-2xl fa-solid fa-4"></i>
+                </button>
+                <button id="btn-five" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="5" type="button">
+                    <i class="fa-2xl fa-solid fa-5"></i>
+                </button>
+                <button id="btn-six" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="6" type="button">
+                    <i class="fa-2xl fa-solid fa-6"></i>
+                </button>
+            </div>
+            <div class="flex justify-center space-x-10">
+                <button id="btn-one" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="1" type="button">
+                    <i class="fa-2xl fa-solid fa-1"></i>
+                </button>
+                <button id="btn-two" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="2" type="button">
+                    <i class="fa-2xl fa-solid fa-2"></i>
+                </button>
+                <button id="btn-three" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="3" type="button">
+                    <i class="fa-2xl fa-solid fa-3"></i>
+                </button>
+            </div>
+            <div class="flex justify-center space-x-10">
+                <button id="btn-zero" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="0" type="button">
+                    <i class="fa-2xl fa-solid fa-0"></i>
+                </button>
+                <button class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="dot" type="button">
+                    <i class="fa-regular fa-circle-dot"></i>
+                </button>
+                <button id="btn-result" class="border border-1 h-12 w-12 text-center hover:border-blue-700 rounded-full" title="=" type="button">
+                    <i class="fa-2xl fa-solid fa-equals"></i>
+                </button>
+            </div>
+        </article>
+    </article>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
